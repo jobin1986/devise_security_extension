@@ -40,4 +40,4 @@ jobs:
         password: admin1234
         applicationId: device-security
         stage: Build
-        target: Gemlock.lock
+        target: /home/runner/work/devise_security_extension/devise_security_extension/Gemlock.lock
