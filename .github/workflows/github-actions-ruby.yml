@@ -19,6 +19,31 @@ jobs:
     runs-on: ubuntu-latest
       
     steps:
+    - name: Setup Ruby
+  # You may pin to the exact commit or the version.
+  # uses: ruby/setup-ruby@f20f1eae726df008313d2e0d78c5e602562a1bcf
+    uses: ruby/setup-ruby@v1.86.0
+    with:
+    # Engine and version to use, see the syntax in the README. Reads from .ruby-version or .tool-versions if unset.
+      ruby-version: # optional, default is default
+    # The version of Bundler to install. Either 'none', 'latest', 'Gemfile.lock', or a version number (e.g., 1, 2, 2.1.4).
+For 'Gemfile.lock', the version is determined based on the BUNDLED WITH section from the file Gemfile.lock, $BUNDLE_GEMFILE.lock or gems.locked.
+Defaults to 'Gemfile.lock' if the file exists and 'latest' otherwise.
+
+    bundler: # optional, default is default
+    # Run "bundle install", and cache the result automatically. Either true or false.
+    bundler-cache: # optional, default is false
+    # The working directory to use for resolving paths for .ruby-version, .tool-versions and Gemfile.lock.
+    working-directory: # optional, default is .
+    # Arbitrary string that will be added to the cache key of the bundler cache. Set or change it if you need
+to invalidate the cache.
+    
+    - uses: actions/checkout@v1
+    
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
     - name: Nexus IQ Policy Evaluation
       uses: sonatype-nexus-community/iq-github-action@master
       with:
