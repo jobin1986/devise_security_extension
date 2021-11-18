@@ -23,9 +23,10 @@ jobs:
       uses: clupprich/ruby-build-action@v1.3.0
       with:
     # Ruby version
-      ruby-version: # default is 2.6.5
+        ruby-version: 2.6.5
     # Flag if the Ruby installation is cached
-      cache-available: # default is false
+        cache-available: false
+      
     
   scan:
 
