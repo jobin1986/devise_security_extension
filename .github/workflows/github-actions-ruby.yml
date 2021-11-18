@@ -30,4 +30,4 @@ jobs:
         password: admin1234
         applicationId: device-security
         stage: Build
-        target: Gemlock.lock
+        target: ./Gemlock.lock
