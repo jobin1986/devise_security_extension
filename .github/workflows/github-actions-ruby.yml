@@ -28,8 +28,10 @@ jobs:
 
   test:
   
-  - name: Test Ruby project
-    run: echo "Run required project tests in this step"        
+    runs-on: ubuntu-latest
+  
+    - name: Test Ruby project
+      run: echo "Run required project tests in this step"        
     
   scan:
 
