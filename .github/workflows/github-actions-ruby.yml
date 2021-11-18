@@ -27,8 +27,6 @@ jobs:
         ruby-version: 2.6.5
     # Flag if the Ruby installation is cached
         cache-available: false
-        
-      run: bundle install
       
     
   scan:
