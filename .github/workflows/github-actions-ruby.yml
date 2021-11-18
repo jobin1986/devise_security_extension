@@ -22,14 +22,10 @@ jobs:
   
     - name: Setup Ruby environment with ruby-build
   # You may pin to the exact commit or the version.
-      uses: clupprich/ruby-build-action@d2971553edbe27a9cb7e277f22b549114bfd3ccf
-      # uses: clupprich/ruby-build-action@v1.3.0
-      with:
-    # Ruby version
-        ruby-version: 2.6.5
-    # Flag if the Ruby installation is cached
-        cache-available: false
-      
+      uses: ruby/setup-ruby@f20f1eae726df008313d2e0d78c5e602562a1bcf
+
+          
+        
     
   scan:
 
@@ -43,6 +39,8 @@ jobs:
       uses: sonatype-nexus-community/iq-github-action@master
       with:
         serverUrl: https://jbernienexusiq.eu.ngrok.io
+        
+        #use variables 
         username: admin
         password: admin1234
         applicationId: device-security
