@@ -46,4 +46,4 @@ jobs:
         stage: Build
         target: ./Gemfile.lock
     
-    scan:
+ 
